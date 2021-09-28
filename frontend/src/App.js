@@ -3,22 +3,23 @@ import './App.css';
 import FacebookLogin from 'react-facebook-login';
 import axios from "axios";
 
+/**
+ * @param response.accessToken
+ */
+const responseFacebook = async (response) => {
+    await axios.post(
+        "/dj-rest-auth/facebook/",
+        {
+            access_token: response.accessToken,
+        }
+    ).then((res) => {
+        console.log(res.data.key);
+    }).catch((err) => {
+        console.log(err);
+    });
+}
+
 function App() {
-    /**
-     * @param response.accessToken
-     */
-    const responseFacebook = async (response) => {
-        await axios.post(
-            "/dj-rest-auth/facebook/",
-            {
-                access_token: response.accessToken,
-            }
-        ).then((res) => {
-            console.log(res.data.key);
-        }).catch((err) => {
-            console.log(err);
-        });
-    }
     return (
         <div className="App">
             <header className="App-header">
@@ -44,7 +45,6 @@ function App() {
             </header>
         </div>
     );
-
 }
 
 export default App;

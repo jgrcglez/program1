@@ -58,6 +58,7 @@ function App() {
                     appId={process.env.REACT_APP_FACEBOOK_APP_ID} //better get from DB (?)
                     fields="name,email"
                     callback={responseFacebook}
+                    style={{cursor:"pointer"}}
                 />
                 <h1>LOGIN WITH GOOGLE</h1>
                 <GoogleLogin
@@ -65,7 +66,8 @@ function App() {
                     buttonText="LOGIN WITH GOOGLE"
                     onSuccess={responseGoogle}
                     onFailure={responseGoogle}
-                    cookiePolicy={'single_host_origin'}
+                    cookiePolicy="single_host_origin"
+                    style={{cursor:"pointer"}}
                 />
             </header>
         </div>

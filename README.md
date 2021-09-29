@@ -5,7 +5,7 @@ A starting point for a Django backend API project with React as frontend.
 It includes dj-rest-auth and allauth for authentication (including social).
 
 <ol>
-  <li>Clone</li>
+  <li>Clone and change origin</li>
   <li>Install Python virtual environment and activate it.</li>
   <li>Install requirements from requirements.txt</li>
   <li>Create .env file and add DJANGO_SECRET_KEY=xxxxxx...</li>

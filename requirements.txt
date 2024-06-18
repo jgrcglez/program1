@@ -2,11 +2,9 @@ django
 djangorestframework
 django-cors-headers
 wheel
-django-allauth
-dj-rest-auth
 whitenoise
-python-dotenv
-
-django-extensions
-Werkzeug
-pyOpenSSL
+black
+django-environ
+django-filter
+Markdown
+psycopg2
